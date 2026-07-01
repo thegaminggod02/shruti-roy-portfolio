@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shruti Roy - AI & Data Science Student & Developer Portfolio. Showcasing projects in Machine Learning, Android Development, and Full Stack Web.">
+    <meta name="keywords" content="Shruti Roy, Portfolio, AI student, Data Science, Machine Learning, Android Developer, Python, Techno College of Engineering">
+    <meta name="author" content="Shruti Roy">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shrutir-ai.github.io/">
+    <meta property="og:title" content="Shruti Roy | AI & Data Science Developer Portfolio">
+    <meta property="og:description" content="Explore my projects in Machine Learning, Android Development, and Full Stack Development. Discover how I turn data into intelligent solutions.">
+    <meta property="og:image" content="assets/images/profile.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Shruti Roy | AI & Data Science Developer Portfolio">
+    <meta property="twitter:description" content="Explore my projects in Machine Learning, Android Development, and Full Stack Development.">
+    <meta property="twitter:image" content="assets/images/profile.png">
+
+    <title>Shruti Roy | AI & Data Science Student & Developer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/profile.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS (Animate on Scroll) CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Custom Cursor Glow -->
+    <div id="cursor-glow"></div>
+    <div id="cursor-dot"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <span class="loader-title">Shruti Roy</span>
+            <div class="loader-bar-bg">
+                <div class="loader-bar"></div>
+            </div>
+            <span class="loader-text">Loading Nexus System...</span>
+        </div>
+    </div>
+
+    <!-- Background Grid Effect -->
+    <div class="bg-grid-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar-header">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-accent">&lt;</span>Shruti<span class="logo-accent">.Roy /&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle Theme">
+                    <i class="fa-solid fa-moon theme-icon"></i>
+                </button>
+                
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open mobile menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <canvas id="hero-particles"></canvas>
+            
+            <div class="hero-background-blobs">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-content" data-aos="fade-right" data-aos-duration="1200">
+                    <span class="hero-greeting">Hello, World! I am</span>
+                    <h1 class="hero-name">Shruti Roy</h1>
+                    <h2 class="hero-title">
+                        I am a <span id="typed-text"></span>
+                    </h2>
+                    <p class="hero-description">
+                        An AI & Data Science engineering student focused on building intelligent algorithms, predictive ML models, and native Android applications. Currently mastering Full Stack Development to bridge the gap between intelligence and user experience.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="assets/resume.pdf" class="btn btn-primary" download>
+                            <i class="fa-solid fa-file-arrow-down icon-left"></i>Download Resume
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fa-solid fa-code icon-left"></i>View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-accent">
+                            <i class="fa-solid fa-paper-plane icon-left"></i>Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="visual-wrapper">
+                        <div class="visual-glow"></div>
+                        <div class="tech-orb font-awesome-orbit">
+                            <div class="orbiting-icon icon-python" title="Python"><i class="fa-brands fa-python"></i></div>
+                            <div class="orbiting-icon icon-android" title="Android"><i class="fa-brands fa-android"></i></div>
+                            <div class="orbiting-icon icon-java" title="Java"><i class="fa-brands fa-java"></i></div>
+                            <div class="orbiting-icon icon-js" title="JavaScript"><i class="fa-brands fa-js"></i></div>
+                            <div class="orbiting-icon icon-brain" title="Machine Learning"><i class="fa-solid fa-brain"></i></div>
+                        </div>
+                        <div class="hero-card glass">
+                            <div class="card-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="card-body-code">
+                                <p class="code-line"><span class="code-keyword">import</span> machine_learning <span class="code-keyword">as</span> ml</p>
+                                <p class="code-line"><span class="code-keyword">import</span> android_studio <span class="code-keyword">as</span> android</p>
+                                <p class="code-line"><br></p>
+                                <p class="code-line"><span class="code-keyword">class</span> <span class="code-class">Developer</span>:</p>
+                                <p class="code-line-indented">name = <span class="code-string">"Shruti Roy"</span></p>
+                                <p class="code-line-indented">status = <span class="code-string">"Always Learning"</span></p>
+                                <p class="code-line-indented">skills = [<span class="code-string">"ML"</span>, <span class="code-string">"DataScience"</span>, <span class="code-string">"Android"</span>]</p>
+                                <p class="code-line-indented"><br></p>
+                                <p class="code-line-indented"><span class="code-keyword">def</span> <span class="code-func">innovate</span>(self):</p>
+                                <p class="code-line-double-indented"><span class="code-keyword">return</span> self.skills.apply(intelligence)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About section">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="arrow"></span>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-title-wrapper" data-aos="fade-up">
+                    <span class="section-subtitle">Get to know me</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-title-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-image-column" data-aos="fade-right" data-aos-delay="200">
+                        <div class="profile-image-container">
+                            <div class="profile-image-frame">
+                                <img src="assets/images/profile.png" alt="Shruti Roy Profile Avatar" class="profile-img">
+                            </div>
+                            <div class="frame-backdrop"></div>
+                            <div class="stats-badge glass">
+                                <span class="badge-num">2027</span>
+                                <span class="badge-txt">B.Tech Grad Year</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-content-column" data-aos="fade-left" data-aos-delay="400">
+                        <h3 class="about-header">Fascinated by Data, Inspired by Intelligence</h3>
+                        <p class="about-text">
+                            I am a Computer Science Engineering student specialized in Artificial Intelligence and Data Science at the Techno College of Engineering (B.Tech 2023-2027). I focus on designing algorithms that find insights within complex datasets and translating those findings into responsive user platforms.
+                        </p>
+                        <p class="about-text">
+                            My journey began with python data analysis, which led me to dive deep into Machine Learning algorithms such as XGBoost and Random Forest, and eventually build full android applications. Right now, I am expanding my skills in Full Stack Web development to create end-to-end intelligent systems.
+                        </p>
+                        
+                        <div class="about-timeline-info">
+                            <h4 class="timeline-heading"><i class="fa-solid fa-graduation-cap icon-left"></i> Education Journey</h4>
+                            <div class="edu-compact-timeline">
+                                <div class="edu-timeline-item">
+                                    <span class="timeline-year">2023 – 2027</span>
+                                    <div class="timeline-content">
+                                        <h5>B.Tech in CS (AI & Data Science)</h5>
+                                        <p>Techno College of Engineering</p>
+                                    </div>
+                                </div>
+                                <div class="edu-timeline-item">
+                                    <span class="timeline-year">2021 – 2023</span>
+                                    <div class="timeline-content">
+                                        <h5>Higher Secondary Schooling</h5>
+                                        <p>Focused on Science & Mathematics</p>
+                                    </div>
+                                </div>
+                                <div class="edu-timeline-item">
+                                    <span class="timeline-year">2021</span>
+                                    <div class="timeline-content">
+                                        <h5>Secondary Schooling</h5>
+                                        <p>Completed with academic honors</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="interests-tags">
+                            <h4 class="interests-heading">Interests:</h4>
+                            <div class="tag-cloud">
+                                <span class="interest-tag">Machine Learning</span>
+                                <span class="interest-tag">Predictive Analytics</span>
+                                <span class="interest-tag">Mobile UI Design</span>
+                                <span class="interest-tag">Data Cleaning</span>
+                                <span class="interest-tag">Native Android</span>
+                                <span class="interest-tag">API Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-title-wrapper" data-aos="fade-up">
+                    <span class="section-subtitle">What I work with</span>
+                    <h2 class="section-title">My Skillset</h2>
+                    <div class="section-title-line"></div>
+                </div>
+
+                <div class="skills-grid">
+                    
+                    <!-- Skill Group: Programming -->
+                    <div class="skill-category-card glass" data-aos="fade-up" data-aos-delay="100">
+                        <div class="category-header">
+                            <div class="category-icon-bg"><i class="fa-solid fa-code"></i></div>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Python</span>
+                                    <span class="percentage">90%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Java</span>
+                                    <span class="percentage">80%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>JavaScript</span>
+                                    <span class="percentage">75%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="75%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>C Language</span>
+                                    <span class="percentage">70%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="70%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Group: AI & ML -->
+                    <div class="skill-category-card glass" data-aos="fade-up" data-aos-delay="200">
+                        <div class="category-header">
+                            <div class="category-icon-bg"><i class="fa-solid fa-brain"></i></div>
+                            <h3>AI & Machine Learning</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Machine Learning</span>
+                                    <span class="percentage">85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Data Science / EDA</span>
+                                    <span class="percentage">85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Regression & Classification</span>
+                                    <span class="percentage">80%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Ensembles (Random Forest, XGBoost)</span>
+                                    <span class="percentage">75%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="75%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Group: Web Development -->
+                    <div class="skill-category-card glass" data-aos="fade-up" data-aos-delay="300">
+                        <div class="category-header">
+                            <div class="category-icon-bg"><i class="fa-solid fa-laptop-code"></i></div>
+                            <h3>Web & Apps</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML5 / CSS3</span>
+                                    <span class="percentage">85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Android App XML / UI</span>
+                                    <span class="percentage">80%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>API Integration</span>
+                                    <span class="percentage">70%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="70%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Full Stack Basics (Node/Express)</span>
+                                    <span class="percentage">60%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="60%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Group: Tools & Platforms -->
+                    <div class="skill-category-card glass" data-aos="fade-up" data-aos-delay="400">
+                        <div class="category-header">
+                            <div class="category-icon-bg"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                            <h3>Tools & Platforms</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Android Studio</span>
+                                    <span class="percentage">80%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Git & GitHub</span>
+                                    <span class="percentage">80%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>VS Code & Jupyter Notebooks</span>
+                                    <span class="percentage">85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Linux Basics / CLI</span>
+                                    <span class="percentage">65%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 0%" data-progress="65%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-title-wrapper" data-aos="fade-up">
+                    <span class="section-subtitle">Real-world examples</span>
+                    <h2 class="section-title">My Projects</h2>
+                    <div class="section-title-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    
+                    <!-- Project 1: House Price Prediction -->
+                    <div class="project-card glass" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-overlay"></div>
+                            <div class="project-icon-placeholder"><i class="fa-solid fa-house-chimney"></i></div>
+                            <span class="project-tag-top">AI / ML</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">House Price Prediction</h3>
+                            <p class="project-description">
+                                A predictive modeling project using Scikit-Learn to estimate residential property values based on demographic and architectural attributes.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-circle-check"></i> Robust exploratory data analysis (EDA)</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Outlier detection & data cleaning pipeline</li>
+                                <li><i class="fa-solid fa-circle-check"></i> R² Score performance optimization</li>
+                            </ul>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Scikit-Learn</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Matplotlib</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/shrutir-ai/house-price-prediction" class="project-link-btn" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Traffic Accident Severity Prediction -->
+                    <div class="project-card glass" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-overlay"></div>
+                            <div class="project-icon-placeholder"><i class="fa-solid fa-car-burst"></i></div>
+                            <span class="project-tag-top">Data Science</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Traffic Severity Predictor</h3>
+                            <p class="project-description">
+                                A classification machine learning algorithm targeting road accident data to predict incident severity class, analyzing road, lighting, and weather factors.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-circle-check"></i> Random Forest & XGBoost classifiers</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Class imbalance resolution via SMOTE</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Multi-class classification optimization</li>
+                            </ul>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Random Forest</span>
+                                <span class="tech-tag">XGBoost</span>
+                                <span class="tech-tag">SMOTE</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/shrutir-ai/traffic-severity-predictor" class="project-link-btn" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Tic Tac Toe Android App -->
+                    <div class="project-card glass" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-overlay"></div>
+                            <div class="project-icon-placeholder"><i class="fa-solid fa-gamepad"></i></div>
+                            <span class="project-tag-top">Mobile App</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Tic Tac Toe Android App</h3>
+                            <p class="project-description">
+                                A native, fully interactive Android app implementing a smooth, game-playing UI with local 2-player modes and a smart single-player AI mode.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-circle-check"></i> AI opponent powered by Minimax Algorithm</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Beautiful Material Design XML layout</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Haptic feedback & custom sound states</li>
+                            </ul>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">XML</span>
+                                <span class="tech-tag">Android Studio</span>
+                                <span class="tech-tag">Minimax AI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/shrutir-ai/tictactoe-android" class="project-link-btn" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Timeline -->
+        <section id="experience" class="timeline-section section-padding">
+            <div class="container">
+                <div class="section-title-wrapper" data-aos="fade-up">
+                    <span class="section-subtitle">My professional roadmap</span>
+                    <h2 class="section-title">Experience & Training</h2>
+                    <div class="section-title-line"></div>
+                </div>
+
+                <div class="vertical-timeline">
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-block" data-aos="fade-right">
+                        <div class="timeline-marker"><i class="fa-solid fa-user-gear"></i></div>
+                        <div class="timeline-card-content glass">
+                            <span class="timeline-card-date">Jan 2026 – Present</span>
+                            <h3 class="timeline-card-title">Full Stack Development Specialization</h3>
+                            <h4 class="timeline-card-company">Independent Learning & Projects</h4>
+                            <p class="timeline-card-text">
+                                Actively building full stack web interfaces using modern HTML, CSS, JavaScript, and backend integration. Expanding understanding of REST APIs, Node.js databases, and responsive design systems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-block" data-aos="fade-left">
+                        <div class="timeline-marker"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div class="timeline-card-content glass">
+                            <span class="timeline-card-date">Aug 2025 – Nov 2025</span>
+                            <h3 class="timeline-card-title">Android Development Training</h3>
+                            <h4 class="timeline-card-company">NIELIT Agartala</h4>
+                            <p class="timeline-card-text">
+                                Completed professional certification training in native Android development. Developed a core command over Java, XML UI layouts, SQLite database handling, and activity life cycles.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-block" data-aos="fade-right">
+                        <div class="timeline-marker"><i class="fa-solid fa-database"></i></div>
+                        <div class="timeline-card-content glass">
+                            <span class="timeline-card-date">May 2025 – Jul 2025</span>
+                            <h3 class="timeline-card-title">AI, Data Science & Machine Learning Training</h3>
+                            <h4 class="timeline-card-company">Ardent Pvt. Ltd.</h4>
+                            <p class="timeline-card-text">
+                                Rigorous internship training in machine learning workflows. Gained hands-on skills in writing Python scripts, scrubbing data using Pandas/NumPy, doing feature engineering, and tuning regression and classification algorithms.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Certifications & Languages Dual Grid -->
+                <div class="dual-grid section-padding">
+                    <!-- Certifications Block -->
+                    <div class="certifications-block glass" data-aos="fade-right">
+                        <h3 class="block-title"><i class="fa-solid fa-award icon-left"></i>Certifications</h3>
+                        <div class="certs-list">
+                            <div class="cert-item">
+                                <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+                                <div class="cert-details">
+                                    <h4>AI & Machine Learning Certification</h4>
+                                    <p>Issued by Ardent Pvt. Ltd. | 2025</p>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+                                <div class="cert-details">
+                                    <h4>Android Native App Development</h4>
+                                    <p>Issued by NIELIT Agartala | 2025</p>
+                                </div>
+                            </div>
+                            <div class="cert-item aspirational">
+                                <div class="cert-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                                <div class="cert-details">
+                                    <h4>Aspirational Milestones</h4>
+                                    <p>AWS Developer Associate & Google Professional Data Engineer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Languages Block -->
+                    <div class="languages-block glass" data-aos="fade-left">
+                        <h3 class="block-title"><i class="fa-solid fa-language icon-left"></i>Languages</h3>
+                        <div class="langs-list">
+                            <div class="lang-item">
+                                <div class="lang-info">
+                                    <span class="lang-name">English</span>
+                                    <span class="lang-fluency">Professional Proficiency</span>
+                                </div>
+                                <div class="lang-bar"><div class="lang-fill" style="width: 90%"></div></div>
+                            </div>
+                            <div class="lang-item">
+                                <div class="lang-info">
+                                    <span class="lang-name">Bengali</span>
+                                    <span class="lang-fluency">Native Speaker</span>
+                                </div>
+                                <div class="lang-bar"><div class="lang-fill" style="width: 100%"></div></div>
+                            </div>
+                            <div class="lang-item">
+                                <div class="lang-info">
+                                    <span class="lang-name">Hindi</span>
+                                    <span class="lang-fluency">Fluent</span>
+                                </div>
+                                <div class="lang-bar"><div class="lang-fill" style="width: 85%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-title-wrapper" data-aos="fade-up">
+                    <span class="section-subtitle">Reach out</span>
+                    <h2 class="section-title">Contact Me</h2>
+                    <div class="section-title-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Info Column -->
+                    <div class="contact-info-column" data-aos="fade-right">
+                        <h3>Let's collaborate on your next data or app idea!</h3>
+                        <p class="contact-pitch">
+                            Whether you want to discuss a new machine learning project, explore data science analysis, review my android experience, or just say hello, drop a message. I am always open to new learning opportunities and internships.
+                        </p>
+                        
+                        <div class="contact-details-list">
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="detail-text">
+                                    <span>Email Me</span>
+                                    <a href="mailto:shruti.roy@example.com">shruti.roy@example.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                                <div class="detail-text">
+                                    <span>Location</span>
+                                    <p>Agartala, Tripura, India</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div class="detail-text">
+                                    <span>University</span>
+                                    <p>Techno College of Engineering</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-connect">
+                            <h4>Connect with me:</h4>
+                            <div class="social-icons">
+                                <a href="https://github.com/shrutir-ai" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://linkedin.com/in/shruti-roy" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Column -->
+                    <div class="contact-form-column glass" data-aos="fade-left">
+                        <form id="portfolio-contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="form-name">Name</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-user input-icon"></i>
+                                    <input type="text" id="form-name" name="name" placeholder="John Doe" required>
+                                </div>
+                                <span class="error-msg" id="name-error">Please enter your name</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-email">Email Address</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-envelope input-icon"></i>
+                                    <input type="email" id="form-email" name="email" placeholder="johndoe@example.com" required>
+                                </div>
+                                <span class="error-msg" id="email-error">Please enter a valid email address</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <div class="input-wrapper textarea-wrapper">
+                                    <i class="fa-regular fa-comment-dots input-icon"></i>
+                                    <textarea id="form-message" name="message" rows="5" placeholder="Hi Shruti, let's talk about..." required></textarea>
+                                </div>
+                                <span class="error-msg" id="message-error">Please enter your message</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Send Message</span><i class="fa-regular fa-paper-plane icon-right"></i>
+                            </button>
+
+                            <!-- Success/Failure Feedback -->
+                            <div id="form-status" class="form-status-box"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <p>&copy; 2026 Shruti Roy. Built with passion and intelligence.</p>
+            </div>
+            <div class="footer-center">
+                <a href="#hero" class="back-to-top-btn" id="back-to-top" aria-label="Back to top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+            <div class="footer-right">
+                <div class="footer-socials">
+                    <a href="https://github.com/shrutir-ai" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/shruti-roy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP for core intro animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- Typed.js for interactive console typewriter -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- AOS (Animate on Scroll) JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Custom JavaScript Files -->
+    <script src="js/particles.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
